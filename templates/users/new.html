@@ -1,0 +1,22 @@
+<!-- templates/users/new.html -->
+<form action="/users" method="post">
+  <div>
+    <label>
+      Имя
+      <input type="text" name="name" value="{{ user.name }}" required>
+    </label>
+    {% if errors['name'] %}
+      <div>{{ errors['name'] }}</div>
+    {% endif %}
+  </div>
+  <div>
+    <label>
+      Email
+      <input type="email" name="email" value="{{ user.email }}" required>
+    </label>
+    {% if errors['email'] %}
+      <div>{{ errors['email'] }}</div>
+    {% endif %}
+  </div>
+  <input type="submit" value="Create User">
+</form>

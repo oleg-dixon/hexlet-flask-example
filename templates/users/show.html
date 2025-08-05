@@ -1,2 +1,6 @@
-<div>id = {{ user.id }}</div>
-<div>nickname = {{ user.name }}</div>
+<div>Имя = {{ user.name }}</div>
+<div>Email = {{ user.email }}</div>
+
+<a href="{{ url_for('users_edit', id=user.id) }}">Редактировать пользователя</a>
+
+<p><a href="{{ url_for('users_get') }}">Назад к списку пользователей</a></p>
